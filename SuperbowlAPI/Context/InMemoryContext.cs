@@ -11,6 +11,7 @@ namespace SuperbowlAPI.Context
         }
 
         public DbSet<GameModel>? GameModel { get; set; }
+        public DbSet<UserModel>? UserModel { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

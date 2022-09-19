@@ -25,6 +25,18 @@ namespace SuperbowlAPI.Context
                 _inMemoryContext.GameModel.AddRange(items);
                 _inMemoryContext.SaveChanges();
             }
+            if(!_inMemoryContext.UserModel.Any())
+            {
+                var items = new List<UserModel>();
+                var user = new UserModel();
+                user.Name = "Anne Arendel";
+                user.Password = "m1nh@s3nh@";
+                user.Username = "usuario";
+                user.Role = "Junior";
+                items.Add(user);
+                _inMemoryContext.UserModel.AddRange(items);
+                _inMemoryContext.SaveChanges();
+            }
         }
     }
 }
